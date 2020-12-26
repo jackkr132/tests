@@ -47,7 +47,7 @@ def doc_list():
 def add_doc(doc_type, doc_number, person_name, doc_shelf):
     new_doc = dict(type=doc_type, number=doc_number, name=person_name)
     if doc_shelf not in directories.keys():
-        return "полки не существует поэтому документ не добавлен"
+        return "Shelf doesn't exists, error."
     else:
         directories[doc_shelf] += [doc_number]
         documents.append(new_doc)
